@@ -19,7 +19,6 @@ public class Seleccion {
     private int id;
 
     @NotBlank
-    @Column(unique = true)
     private String nombre;
 
     @NotNull
@@ -37,7 +36,7 @@ public class Seleccion {
 
     @NotNull
     private Integer titulosMundiales;
-    
+
     @NotNull
     private String escudoUrl;
 }
