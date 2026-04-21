@@ -27,12 +27,12 @@ public class Estadio {
     private String ciudad;
 
     @NotNull
-    @Min(0)
+  
     private Integer capacidad;
 
     private String fotoUrl; 
    
-    
+
     @OneToMany(mappedBy = "estadio")
     private List<Partido> partidos;
 }
