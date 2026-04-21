@@ -1,0 +1,38 @@
+package com.example.fut_com.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "estadios")
+public class Estadio {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank
+    private String nombre;
+
+    @NotBlank
+    private String ciudad;
+
+    @NotNull
+    @Min(0)
+    private Integer capacidad;
+
+    private String fotoUrl; 
+   
+    
+    @OneToMany(mappedBy = "estadio")
+    private List<Partido> partidos;
+}
