@@ -60,6 +60,7 @@ public class Seleccion {
     private int id;
 
     @NotBlank
+    @OneToMany(mappedBy = "seleccion")
     private String nombre;
 
     @NotNull
@@ -80,4 +81,5 @@ public class Seleccion {
 
     @NotNull
     private String escudoUrl;
+
 }
