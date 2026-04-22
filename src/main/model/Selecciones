@@ -22,7 +22,6 @@ public class Seleccion {
     private String nombre;
 
     @NotNull
-    @Min(1)
     private Integer rankingFifa; 
 
     @NotBlank
