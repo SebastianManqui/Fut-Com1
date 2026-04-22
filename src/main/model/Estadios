@@ -18,7 +18,7 @@ public class Estadio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id_estadio;
 
     @NotBlank
     private String nombre;
@@ -27,10 +27,10 @@ public class Estadio {
     private String ciudad;
 
     @NotNull
-  
     private Integer capacidad;
-
-    private String fotoUrl; 
+    
+    @NotBlank
+    private String fotoEscudo; 
    
 
     @OneToMany(mappedBy = "estadio")
